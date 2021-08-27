@@ -1,0 +1,10 @@
+﻿@page "/eventi"
+
+@if(EventoCorrente == null)
+{
+    <ListaEventi ListaElementi = "ListaEventi" OnElimina = "EliminaEvento" OnCrea = "CreaEvento" OnModifica = "ModificaEvento" />
+}
+else
+{
+    <DettaglioEvento DettaglioElemento = "EventoCorrente" OnSalva = "SalvaEvento" OnAnnulla = "AnnullaOperazione" />
+}

@@ -10,3 +10,6 @@ Soluzione:
 3- impostare il progetto.Server come startup project(forse non serve)
 4- ricompilare la soluzione
 5- assicurarsi che la package manager console stia operando nel progetto giusto
+
+System.InvalidOperationException: 'Client 'event-manager-wasm.Client' not found.'
+Soluzione: se il nome del progetto contiene alcuni simboli, tra cui "-" vs fa casino e bisgna cambiare manualmente il nome del progetto all'interno del file project.Server.appsetting.json

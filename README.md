@@ -13,3 +13,6 @@ Soluzione:
 
 System.InvalidOperationException: 'Client 'event-manager-wasm.Client' not found.'
 Soluzione: se il nome del progetto contiene alcuni simboli, tra cui "-" vs fa casino e bisgna cambiare manualmente il nome del progetto all'interno del file project.Server.appsetting.json
+
+the name does not exist in the current context
+Soluzuione: probabilmente un problema di scoping. Assicurarsi che tutte le variabili coinvolte siano visibili e che i nomi delle classi siano corretti

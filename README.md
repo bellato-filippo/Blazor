@@ -19,3 +19,6 @@ Soluzuione: probabilmente un problema di scoping. Assicurarsi che tutte le varia
 
 Problemi con OnSalva, EventCallback e InvokeAsync()
 Soluzione: il metodo OnSalva NON può essere nullo. Inserendo l'operatore ? il metodo da errore
+
+EditForm requires either a Model parameter or an EditContext parameter
+Soluzione: probabilmente un problema di inizializzazione dell'oggetto. Quando si usa il componente, se il Model è un parametro, bisogna assicurarsi che esso sia inizializzato con new

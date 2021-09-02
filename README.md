@@ -16,3 +16,6 @@ Soluzione: se il nome del progetto contiene alcuni simboli, tra cui "-" vs fa ca
 
 the name does not exist in the current context
 Soluzuione: probabilmente un problema di scoping. Assicurarsi che tutte le variabili coinvolte siano visibili e che i nomi delle classi siano corretti
+
+Problemi con OnSalva, EventCallback e InvokeAsync()
+Soluzione: il metodo OnSalva NON può essere nullo. Inserendo l'operatore ? il metodo da errore

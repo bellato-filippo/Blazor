@@ -22,3 +22,6 @@ Soluzione: il metodo OnSalva NON può essere nullo. Inserendo l'operatore ? il m
 
 EditForm requires either a Model parameter or an EditContext parameter
 Soluzione: probabilmente un problema di inizializzazione dell'oggetto. Quando si usa il componente, se il Model è un parametro, bisogna assicurarsi che esso sia inizializzato con new
+
+Unhandled exception rendering component: Cannot provide a value for property 'Syncfusion Service'
+Soluzione: il builder.Services.AddSyncfusionBlazor(); va aggiunto in Project.Client.Program.cs e non in Project.Server.Program.cs

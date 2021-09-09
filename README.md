@@ -7,7 +7,7 @@ The specified deps.json [C:\Users\Filippo\source\repos\BlazorApp1\BlazorApp1\Cli
 Soluzione:
 1- Chiudere vs
 2- eliminare le cartelle bin e obj del progetto
-3- impostare il progetto.Server come startup project(forse non serve)
+3- impostare il progetto.Server come startup project(forse è l'unico passaggio necessario)
 4- ricompilare la soluzione
 5- assicurarsi che la package manager console stia operando nel progetto giusto
 
@@ -25,3 +25,9 @@ Soluzione: probabilmente un problema di inizializzazione dell'oggetto. Quando si
 
 Unhandled exception rendering component: Cannot provide a value for property 'Syncfusion Service'
 Soluzione: il builder.Services.AddSyncfusionBlazor(); va aggiunto in Project.Client.Program.cs e non in Project.Server.Program.cs
+
+Cannot implicitly convert type 'void' to 'Object'
+Soluzione: quando chiamo un metodo sul componente .razor con la sintassi @metodo(); il component si aspetta di mostrare a video qualcosa, ma se il metodo è void non c'è niente da mostrare. Per farlo basta inserire il metodo desiderato all'interno di un blocco @{}
+
+Name does not exist in the current context
+Soluzione: probabilmente il motivo è che all'interno di un componente(la parte c#) NON può esserci altro che la dichiarazione e inizializzazione di una variabile. Tutto il resto delle operazioni vanno create all'interno di un metodo che poi può essere tranquillamente chiamato.

@@ -31,3 +31,6 @@ Soluzione: quando chiamo un metodo sul componente .razor con la sintassi @metodo
 
 Name does not exist in the current context
 Soluzione: probabilmente il motivo è che all'interno di un componente(la parte c#) NON può esserci altro che la dichiarazione e inizializzazione di una variabile. Tutto il resto delle operazioni vanno create all'interno di un metodo che poi può essere tranquillamente chiamato.
+
+Il CSS non si aggiorna
+Soluzione: cancellare la cache di chrome con shift+ctrl+canc > cancella dati
